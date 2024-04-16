@@ -39,6 +39,13 @@ class UserInfoViewController: UIViewController {
         print(year,month,day)
     }
     
+    func errorMessage(_ message: String) {
+        let alert = UIAlertController(title: "エラー", message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(ok)
+        present(alert,animated: true,completion: nil)
+    }
+    
 
 }
 
