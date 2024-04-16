@@ -13,6 +13,7 @@
 		B5197D0D2BCE35FB00ED9670 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B5197D0C2BCE35FB00ED9670 /* Base */; };
 		B5197D0F2BCE35FE00ED9670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5197D0E2BCE35FE00ED9670 /* Assets.xcassets */; };
 		B5197D122BCE35FE00ED9670 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B5197D112BCE35FE00ED9670 /* Base */; };
+		B5197D1A2BCE381000ED9670 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5197D192BCE381000ED9670 /* UserInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B5197D0E2BCE35FE00ED9670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5197D112BCE35FE00ED9670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5197D132BCE35FE00ED9670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5197D192BCE381000ED9670 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				B5197D052BCE35FB00ED9670 /* AppDelegate.swift */,
 				B5197D072BCE35FB00ED9670 /* SceneDelegate.swift */,
 				B5197D092BCE35FB00ED9670 /* ViewController.swift */,
+				B5197D192BCE381000ED9670 /* UserInfoViewController.swift */,
 				B5197D0B2BCE35FB00ED9670 /* Main.storyboard */,
 				B5197D0E2BCE35FE00ED9670 /* Assets.xcassets */,
 				B5197D102BCE35FE00ED9670 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5197D0A2BCE35FB00ED9670 /* ViewController.swift in Sources */,
+				B5197D1A2BCE381000ED9670 /* UserInfoViewController.swift in Sources */,
 				B5197D062BCE35FB00ED9670 /* AppDelegate.swift in Sources */,
 				B5197D082BCE35FB00ED9670 /* SceneDelegate.swift in Sources */,
 			);

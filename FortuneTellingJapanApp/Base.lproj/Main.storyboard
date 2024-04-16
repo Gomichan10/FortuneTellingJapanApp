@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="lcc-NI-bgL">
             <objects>
-                <viewController id="hSV-78-ptw" customClass="ViewController" customModule="FortuneTellingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hSV-78-ptw" customClass="ViewController" customModule="FortuneTellingJapanApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CR9-B7-8OE">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,6 @@
                                     <constraint firstAttribute="height" constant="67" id="ADo-Jf-W8S"/>
                                     <constraint firstAttribute="width" constant="361" id="VqK-ko-cnI"/>
                                 </constraints>
-                                <color key="tintColor" red="0.90980386729999996" green="0.62745100259999997" blue="0.2470588088" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="スタート" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="30"/>
@@ -69,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
         </scene>
-        <!--View Controller-->
+        <!--User Info View Controller-->
         <scene sceneID="DWy-3e-Ca4">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="3w6-eH-Vy2" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="3w6-eH-Vy2" customClass="UserInfoViewController" customModule="FortuneTellingJapanApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HZq-ZJ-uIq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,7 +118,6 @@
                                     <constraint firstAttribute="width" constant="361" id="UTi-KH-gGM"/>
                                     <constraint firstAttribute="height" constant="67" id="hwa-r6-0k5"/>
                                 </constraints>
-                                <color key="tintColor" red="0.90980386729999996" green="0.62745100259999997" blue="0.2470588088" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="占う！" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="30"/>
@@ -159,6 +157,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kNR-pL-Vfa"/>
+                    <connections>
+                        <outlet property="bloodPicker" destination="b1A-wW-5SC" id="tIT-VM-myt"/>
+                        <outlet property="datePicker" destination="rFr-Uw-x63" id="TWT-5i-vRR"/>
+                        <outlet property="userName" destination="BfQ-7P-kD5" id="dJx-1Q-lK6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="myW-OT-PXW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
