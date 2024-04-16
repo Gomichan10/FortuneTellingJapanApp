@@ -26,6 +26,7 @@ class UserInfoViewController: UIViewController {
         bloodPicker.dataSource = self
         bloodPicker.delegate = self
         
+        datePicker.maximumDate = Date()
         datePicker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
     }
     
