@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F90C8ADE3D0A7DE4333810A /* Pods_FortuneTellingJapanApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4640BC10A02E66E43F837DE6 /* Pods_FortuneTellingJapanApp.framework */; };
 		B5197D062BCE35FB00ED9670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5197D052BCE35FB00ED9670 /* AppDelegate.swift */; };
 		B5197D082BCE35FB00ED9670 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5197D072BCE35FB00ED9670 /* SceneDelegate.swift */; };
 		B5197D0A2BCE35FB00ED9670 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5197D092BCE35FB00ED9670 /* ViewController.swift */; };
@@ -14,9 +15,15 @@
 		B5197D0F2BCE35FE00ED9670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5197D0E2BCE35FE00ED9670 /* Assets.xcassets */; };
 		B5197D122BCE35FE00ED9670 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B5197D112BCE35FE00ED9670 /* Base */; };
 		B5197D1A2BCE381000ED9670 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5197D192BCE381000ED9670 /* UserInfoViewController.swift */; };
+		B5197D1C2BCF508D00ED9670 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5197D1B2BCF508C00ED9670 /* UserData.swift */; };
+		B5197D202BCF587600ED9670 /* UserAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5197D1F2BCF587600ED9670 /* UserAPIClient.swift */; };
+		B5197D222BD10D9500ED9670 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5197D212BD10D9500ED9670 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4640BC10A02E66E43F837DE6 /* Pods_FortuneTellingJapanApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FortuneTellingJapanApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56CB319C1C8892BC7224479E /* Pods-FortuneTellingJapanApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortuneTellingJapanApp.debug.xcconfig"; path = "Target Support Files/Pods-FortuneTellingJapanApp/Pods-FortuneTellingJapanApp.debug.xcconfig"; sourceTree = "<group>"; };
+		6966AE5057DBA6351748DA79 /* Pods-FortuneTellingJapanApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortuneTellingJapanApp.release.xcconfig"; path = "Target Support Files/Pods-FortuneTellingJapanApp/Pods-FortuneTellingJapanApp.release.xcconfig"; sourceTree = "<group>"; };
 		B5197D022BCE35FB00ED9670 /* FortuneTellingJapanApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FortuneTellingJapanApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5197D052BCE35FB00ED9670 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5197D072BCE35FB00ED9670 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +33,9 @@
 		B5197D112BCE35FE00ED9670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5197D132BCE35FE00ED9670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5197D192BCE381000ED9670 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		B5197D1B2BCF508C00ED9670 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		B5197D1F2BCF587600ED9670 /* UserAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIClient.swift; sourceTree = "<group>"; };
+		B5197D212BD10D9500ED9670 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F90C8ADE3D0A7DE4333810A /* Pods_FortuneTellingJapanApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44E0E1C9013B9F46176374DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56CB319C1C8892BC7224479E /* Pods-FortuneTellingJapanApp.debug.xcconfig */,
+				6966AE5057DBA6351748DA79 /* Pods-FortuneTellingJapanApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6A352C3BE38D313EF8561FF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4640BC10A02E66E43F837DE6 /* Pods_FortuneTellingJapanApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B5197CF92BCE35FB00ED9670 = {
 			isa = PBXGroup;
 			children = (
 				B5197D042BCE35FB00ED9670 /* FortuneTellingJapanApp */,
 				B5197D032BCE35FB00ED9670 /* Products */,
+				44E0E1C9013B9F46176374DD /* Pods */,
+				6A352C3BE38D313EF8561FF7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +92,9 @@
 				B5197D072BCE35FB00ED9670 /* SceneDelegate.swift */,
 				B5197D092BCE35FB00ED9670 /* ViewController.swift */,
 				B5197D192BCE381000ED9670 /* UserInfoViewController.swift */,
+				B5197D1B2BCF508C00ED9670 /* UserData.swift */,
+				B5197D1F2BCF587600ED9670 /* UserAPIClient.swift */,
+				B5197D212BD10D9500ED9670 /* ResultViewController.swift */,
 				B5197D0B2BCE35FB00ED9670 /* Main.storyboard */,
 				B5197D0E2BCE35FE00ED9670 /* Assets.xcassets */,
 				B5197D102BCE35FE00ED9670 /* LaunchScreen.storyboard */,
@@ -77,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5197D162BCE35FE00ED9670 /* Build configuration list for PBXNativeTarget "FortuneTellingJapanApp" */;
 			buildPhases = (
+				8C98C6E274BDEFEB78C19632 /* [CP] Check Pods Manifest.lock */,
 				B5197CFE2BCE35FB00ED9670 /* Sources */,
 				B5197CFF2BCE35FB00ED9670 /* Frameworks */,
 				B5197D002BCE35FB00ED9670 /* Resources */,
+				7E4F6EB4036C3784E341628D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +171,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7E4F6EB4036C3784E341628D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FortuneTellingJapanApp/Pods-FortuneTellingJapanApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FortuneTellingJapanApp/Pods-FortuneTellingJapanApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FortuneTellingJapanApp/Pods-FortuneTellingJapanApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C98C6E274BDEFEB78C19632 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FortuneTellingJapanApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B5197CFE2BCE35FB00ED9670 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -143,7 +220,10 @@
 			files = (
 				B5197D0A2BCE35FB00ED9670 /* ViewController.swift in Sources */,
 				B5197D1A2BCE381000ED9670 /* UserInfoViewController.swift in Sources */,
+				B5197D222BD10D9500ED9670 /* ResultViewController.swift in Sources */,
 				B5197D062BCE35FB00ED9670 /* AppDelegate.swift in Sources */,
+				B5197D1C2BCF508D00ED9670 /* UserData.swift in Sources */,
+				B5197D202BCF587600ED9670 /* UserAPIClient.swift in Sources */,
 				B5197D082BCE35FB00ED9670 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,12 +371,14 @@
 		};
 		B5197D172BCE35FE00ED9670 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56CB319C1C8892BC7224479E /* Pods-FortuneTellingJapanApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 274CZPH4P8;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FortuneTellingJapanApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -319,12 +401,14 @@
 		};
 		B5197D182BCE35FE00ED9670 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6966AE5057DBA6351748DA79 /* Pods-FortuneTellingJapanApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 274CZPH4P8;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FortuneTellingJapanApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
