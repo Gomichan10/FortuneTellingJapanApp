@@ -165,6 +165,7 @@
                         <outlet property="bloodPicker" destination="b1A-wW-5SC" id="tIT-VM-myt"/>
                         <outlet property="datePicker" destination="rFr-Uw-x63" id="TWT-5i-vRR"/>
                         <outlet property="userName" destination="BfQ-7P-kD5" id="dJx-1Q-lK6"/>
+                        <segue destination="pf2-Pb-hlm" kind="show" identifier="result" id="VWs-FP-om3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="myW-OT-PXW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -180,14 +181,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WsU-2j-MBn">
-                                <rect key="frame" x="76.666666666666686" y="129" width="240" height="240"/>
+                                <rect key="frame" x="76.666666666666686" y="70" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="0J0-4B-6cQ"/>
                                     <constraint firstAttribute="height" constant="240" id="3KY-BG-t3N"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの占いの結果は・・・" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DtF-Rf-9CN">
-                                <rect key="frame" x="62.666666666666657" y="89" width="268" height="27"/>
+                                <rect key="frame" x="62.666666666666657" y="30" width="268" height="27"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>

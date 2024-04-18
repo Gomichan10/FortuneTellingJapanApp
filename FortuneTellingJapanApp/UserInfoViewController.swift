@@ -62,6 +62,7 @@ class UserInfoViewController: UIViewController {
         present(alert,animated: true,completion: nil)
     }
     
+    //バリデーションチェックを行った後にAPIを叩いて結果をResultViewControllerに送る
     @IBAction func fortuneTellingButton(_ sender: Any) {
         if !checkName() || !checkDate() || !checkBlood() {
             print("Error")
@@ -75,12 +76,20 @@ class UserInfoViewController: UIViewController {
         UserAPIClient.shared.sendUserData(userData: userData) { result in
             switch result {
             case .success(let value):
-                print(value)
+                self.performSegue(withIdentifier: "result", sender: value)
             case .failure(let error):
                 print(error)
             }
         }
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "result" {
+            if let VC = segue.destination as? ResultViewController {
+                VC.jsonData = sender
+            }
+        }
     }
     
     //名前が入力されているかのチェック
