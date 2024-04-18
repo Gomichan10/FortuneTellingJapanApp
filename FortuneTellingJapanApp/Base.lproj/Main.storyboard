@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -170,9 +171,108 @@
             </objects>
             <point key="canvasLocation" x="1064.885496183206" y="-27.464788732394368"/>
         </scene>
+        <!--Result View Controller-->
+        <scene sceneID="6RL-L5-GF8">
+            <objects>
+                <viewController storyboardIdentifier="result" modalPresentationStyle="fullScreen" id="pf2-Pb-hlm" customClass="ResultViewController" customModule="FortuneTellingJapanApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hQ5-FW-rea">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WsU-2j-MBn">
+                                <rect key="frame" x="76.666666666666686" y="129" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="0J0-4B-6cQ"/>
+                                    <constraint firstAttribute="height" constant="240" id="3KY-BG-t3N"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの占いの結果は・・・" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DtF-Rf-9CN">
+                                <rect key="frame" x="62.666666666666657" y="89" width="268" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jo2-2W-cKW">
+                                <rect key="frame" x="163" y="411" width="67" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFj-Gx-3pi">
+                                <rect key="frame" x="169" y="449" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Citizen_day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYP-Ep-pH4">
+                                <rect key="frame" x="150.66666666666666" y="500" width="91.666666666666657" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Has_coat_line" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6E-6G-yq5">
+                                <rect key="frame" x="142.66666666666666" y="529" width="108" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qOy-wu-X4r">
+                                <rect key="frame" x="34" y="558" width="325" height="250"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="ADU-Mp-x4I"/>
+                                    <constraint firstAttribute="width" constant="325" id="ntq-YH-fKP"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eWc-D8-ZfT"/>
+                        <color key="backgroundColor" red="0.99607843159999998" green="0.97254902119999997" blue="0.89019608500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="DtF-Rf-9CN" firstAttribute="centerX" secondItem="hQ5-FW-rea" secondAttribute="centerX" id="5LJ-2O-sXa"/>
+                            <constraint firstItem="yYP-Ep-pH4" firstAttribute="centerX" secondItem="hQ5-FW-rea" secondAttribute="centerX" id="8Sh-hs-uGS"/>
+                            <constraint firstItem="p6E-6G-yq5" firstAttribute="centerX" secondItem="hQ5-FW-rea" secondAttribute="centerX" id="AiZ-J2-ngB"/>
+                            <constraint firstItem="WsU-2j-MBn" firstAttribute="centerX" secondItem="hQ5-FW-rea" secondAttribute="centerX" id="BN7-Bm-Gju"/>
+                            <constraint firstItem="DtF-Rf-9CN" firstAttribute="top" secondItem="eWc-D8-ZfT" secondAttribute="top" constant="30" id="Hzi-21-KEW"/>
+                            <constraint firstItem="qOy-wu-X4r" firstAttribute="top" secondItem="p6E-6G-yq5" secondAttribute="bottom" constant="8" id="Iq9-d7-FQu"/>
+                            <constraint firstItem="jo2-2W-cKW" firstAttribute="centerX" secondItem="hQ5-FW-rea" secondAttribute="centerX" id="OjA-Dr-tAF"/>
+                            <constraint firstItem="gFj-Gx-3pi" firstAttribute="centerX" secondItem="hQ5-FW-rea" secondAttribute="centerX" id="QVS-lV-lvE"/>
+                            <constraint firstItem="yYP-Ep-pH4" firstAttribute="top" secondItem="gFj-Gx-3pi" secondAttribute="bottom" constant="30" id="Xiz-6z-GAX"/>
+                            <constraint firstItem="jo2-2W-cKW" firstAttribute="centerY" secondItem="hQ5-FW-rea" secondAttribute="centerY" id="dVX-A6-HNo"/>
+                            <constraint firstItem="WsU-2j-MBn" firstAttribute="top" secondItem="eWc-D8-ZfT" secondAttribute="top" constant="70" id="dXY-tz-eEB"/>
+                            <constraint firstItem="p6E-6G-yq5" firstAttribute="top" secondItem="yYP-Ep-pH4" secondAttribute="bottom" constant="8" id="iCU-R3-jPH"/>
+                            <constraint firstItem="qOy-wu-X4r" firstAttribute="centerX" secondItem="hQ5-FW-rea" secondAttribute="centerX" id="thY-of-AO8"/>
+                            <constraint firstItem="gFj-Gx-3pi" firstAttribute="top" secondItem="jo2-2W-cKW" secondAttribute="bottom" constant="8" id="xAN-S7-gH5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="I6L-AI-lTy"/>
+                    <connections>
+                        <outlet property="capitalLabel" destination="gFj-Gx-3pi" id="w6R-xR-2TM"/>
+                        <outlet property="citizenDayLabel" destination="yYP-Ep-pH4" id="aOa-zp-qM8"/>
+                        <outlet property="detailLabel" destination="qOy-wu-X4r" id="sjY-cf-pzW"/>
+                        <outlet property="hasCoatLineLabel" destination="p6E-6G-yq5" id="knq-wP-Jvh"/>
+                        <outlet property="logoImage" destination="WsU-2j-MBn" id="CEu-tg-qRJ"/>
+                        <outlet property="nameLabel" destination="jo2-2W-cKW" id="J8s-2O-1KV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DrL-SE-Bld" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2023.6641221374045" y="-27.464788732394368"/>
+        </scene>
     </scenes>
     <resources>
         <image name="job_uranaishi" width="180" height="180"/>
         <image name="nihonchizu_area" width="400" height="400"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

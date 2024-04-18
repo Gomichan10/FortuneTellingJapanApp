@@ -9,14 +9,17 @@ import UIKit
 
 class UserInfoViewController: UIViewController {
     
-    
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var bloodPicker: UIPickerView!
-    
+        
     var year = 0
     var month = 0
     var day = 0
+    
+    var todayYear = 0
+    var todayMonth = 0
+    var todayDay = 0
     
     let bloodType = ["a", "b", "ab", "o"]
     var userBloodType = ""
@@ -26,6 +29,7 @@ class UserInfoViewController: UIViewController {
         bloodPicker.dataSource = self
         bloodPicker.delegate = self
         
+        todayDateSet()
         datePicker.maximumDate = Date()
         datePicker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
     }
@@ -40,6 +44,16 @@ class UserInfoViewController: UIViewController {
         print(year,month,day)
     }
     
+    //今日の日にちをセットする関数
+    func todayDateSet() {
+        let now = Date()
+        let calendar = Calendar.current
+        
+        todayYear = calendar.component(.year, from: now)
+        todayMonth = calendar.component(.month, from: now)
+        todayDay = calendar.component(.day, from: now)
+    }
+    
     /// 指定されたメッセージを含むアラートダイアログを表示する関数
     func errorMessage(_ message: String) {
         let alert = UIAlertController(title: "エラー", message: message, preferredStyle: .alert)
@@ -51,7 +65,22 @@ class UserInfoViewController: UIViewController {
     @IBAction func fortuneTellingButton(_ sender: Any) {
         if !checkName() || !checkDate() || !checkBlood() {
             print("Error")
+            return
         }
+        
+        let today = DateInfo(year: todayYear, month: todayMonth, day: todayDay)
+        let birthday = DateInfo(year: year, month: month, day: day)
+        let userData = User(name: userName.text ?? "No Name", birthday: birthday, blood_type: userBloodType, today: today)
+        
+        UserAPIClient.shared.sendUserData(userData: userData) { result in
+            switch result {
+            case .success(let value):
+                print(value)
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
     }
     
     //名前が入力されているかのチェック
@@ -80,8 +109,6 @@ class UserInfoViewController: UIViewController {
         return true
     }
     
-    
-
 }
 
 
