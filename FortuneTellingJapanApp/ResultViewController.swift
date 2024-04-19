@@ -16,15 +16,15 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var hasCoatLineLabel: UILabel!
     @IBOutlet weak var detailLabel: UITextView!
     
-    var jsonData: Any?
+    var jsonString: Any?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(jsonData)
+        
     }
     
-
+    
     
 
 }

@@ -87,7 +87,7 @@ class UserInfoViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "result" {
             if let VC = segue.destination as? ResultViewController {
-                VC.jsonData = sender
+                VC.jsonString = sender
             }
         }
     }
