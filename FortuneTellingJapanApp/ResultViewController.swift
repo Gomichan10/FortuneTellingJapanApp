@@ -50,7 +50,27 @@ class ResultViewController: UIViewController {
             hasCoatLineLabel.text = "海岸線：なし"
         }
         detailLabel.text = jsonData["brief"] as? String
+        if let urlString = jsonData["logo_url"] as? String, let url = URL(string: urlString) {
+            setImage(url: url)
+        } else {
+            print("Error: Failed to properly store the URL in a variable")
+        }
     }
     
+    //都道府県の画像を出力する関数
+    func setImage(url: URL) {
+        DispatchQueue.global().async {
+            do {
+                let data = try Data(contentsOf: url)
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self.logoImage.image = image
+                    }
+                }
+            } catch {
+                print(error)
+            }
+        }
+    }
 
 }
