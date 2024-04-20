@@ -27,11 +27,3 @@ struct User: Codable {
     var today: DateInfo
 }
 
-struct Prefecture: Decodable {
-    var name: String
-    var capital: String
-    var citizen_day: MonthDay
-    var has_coast_line: Bool
-    var logo_url: String
-    var brief: String
-}

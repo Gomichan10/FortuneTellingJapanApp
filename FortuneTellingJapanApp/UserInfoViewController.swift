@@ -62,10 +62,10 @@ class UserInfoViewController: UIViewController {
         present(alert,animated: true,completion: nil)
     }
     
-    //バリデーションチェックを行った後にAPIを叩いて結果をResultViewControllerに送る
+    //バリデーションチェックを行ってからAPIを叩く処理
     @IBAction func fortuneTellingButton(_ sender: Any) {
         if !checkName() || !checkDate() || !checkBlood() {
-            print("Error")
+            print("Error: No input provided")
             return
         }
         

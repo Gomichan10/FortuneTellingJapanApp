@@ -217,14 +217,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qOy-wu-X4r">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOy-wu-X4r">
                                 <rect key="frame" x="34" y="558" width="325" height="250"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.99607843159999998" green="0.97254902119999997" blue="0.89019608500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="ADU-Mp-x4I"/>
                                     <constraint firstAttribute="width" constant="325" id="ntq-YH-fKP"/>
                                 </constraints>
-                                <color key="textColor" systemColor="labelColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -254,7 +254,7 @@
                         <outlet property="citizenDayLabel" destination="yYP-Ep-pH4" id="aOa-zp-qM8"/>
                         <outlet property="detailLabel" destination="qOy-wu-X4r" id="sjY-cf-pzW"/>
                         <outlet property="hasCoatLineLabel" destination="p6E-6G-yq5" id="knq-wP-Jvh"/>
-                        <outlet property="logoImage" destination="WsU-2j-MBn" id="CEu-tg-qRJ"/>
+                        <outlet property="logoImage" destination="WsU-2j-MBn" id="nH8-3g-6OY"/>
                         <outlet property="nameLabel" destination="jo2-2W-cKW" id="J8s-2O-1KV"/>
                     </connections>
                 </viewController>
@@ -266,12 +266,6 @@
     <resources>
         <image name="job_uranaishi" width="180" height="180"/>
         <image name="nihonchizu_area" width="400" height="400"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
