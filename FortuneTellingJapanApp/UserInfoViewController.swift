@@ -29,7 +29,14 @@ class UserInfoViewController: UIViewController {
         bloodPicker.dataSource = self
         bloodPicker.delegate = self
         
+        if #available(iOS 13.0, *) {
+            userName.overrideUserInterfaceStyle = .light
+            datePicker.overrideUserInterfaceStyle = .light
+            bloodPicker.overrideUserInterfaceStyle = .light
+        }
+        
         todayDateSet()
+        
         datePicker.maximumDate = Date()
         datePicker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
     }
