@@ -23,6 +23,7 @@ class UserAPIClient {
         AF.request(url, method: .post, parameters: userData, encoder: JSONParameterEncoder.default, headers: headers).responseJSON { response in
             switch response.result {
             case .success(let value):
+                print(value)
                 completion(.success(value))
             case .failure(let error):
                 completion(.failure(error))

@@ -29,9 +29,21 @@ class UserInfoViewController: UIViewController {
         bloodPicker.dataSource = self
         bloodPicker.delegate = self
         
+        if #available(iOS 13.0, *) {
+            userName.overrideUserInterfaceStyle = .light
+            datePicker.overrideUserInterfaceStyle = .light
+            bloodPicker.overrideUserInterfaceStyle = .light
+        }
+        
         todayDateSet()
+        
         datePicker.maximumDate = Date()
         datePicker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
+    }
+    
+    //キーボード以外の画面を触ったらキーボード消すようにするメソッド
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     /// DatePickerの値が変更されたときに年、月、日を更新し、コンソールに表示する関数です
@@ -62,10 +74,10 @@ class UserInfoViewController: UIViewController {
         present(alert,animated: true,completion: nil)
     }
     
-    //バリデーションチェックを行った後にAPIを叩いて結果をResultViewControllerに送る
+    //バリデーションチェックを行ってからAPIを叩く処理
     @IBAction func fortuneTellingButton(_ sender: Any) {
         if !checkName() || !checkDate() || !checkBlood() {
-            print("Error")
+            print("Error: No input provided")
             return
         }
         
@@ -87,7 +99,7 @@ class UserInfoViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "result" {
             if let VC = segue.destination as? ResultViewController {
-                VC.jsonData = sender
+                VC.jsonString = sender
             }
         }
     }
