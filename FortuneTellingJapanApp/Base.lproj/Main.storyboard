@@ -228,6 +228,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0C-fN-NmP">
+                                <rect key="frame" x="0.0" y="0.0" width="47" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="backButton:" destination="pf2-Pb-hlm" eventType="touchUpInside" id="Vwm-mB-HMx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eWc-D8-ZfT"/>
                         <color key="backgroundColor" red="0.99607843159999998" green="0.97254902119999997" blue="0.89019608500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -241,11 +249,13 @@
                             <constraint firstItem="jo2-2W-cKW" firstAttribute="centerX" secondItem="hQ5-FW-rea" secondAttribute="centerX" id="OjA-Dr-tAF"/>
                             <constraint firstItem="gFj-Gx-3pi" firstAttribute="centerX" secondItem="hQ5-FW-rea" secondAttribute="centerX" id="QVS-lV-lvE"/>
                             <constraint firstItem="yYP-Ep-pH4" firstAttribute="top" secondItem="gFj-Gx-3pi" secondAttribute="bottom" constant="30" id="Xiz-6z-GAX"/>
+                            <constraint firstItem="d0C-fN-NmP" firstAttribute="top" secondItem="eWc-D8-ZfT" secondAttribute="top" id="cGs-4v-fhu"/>
                             <constraint firstItem="jo2-2W-cKW" firstAttribute="centerY" secondItem="hQ5-FW-rea" secondAttribute="centerY" id="dVX-A6-HNo"/>
                             <constraint firstItem="WsU-2j-MBn" firstAttribute="top" secondItem="eWc-D8-ZfT" secondAttribute="top" constant="70" id="dXY-tz-eEB"/>
                             <constraint firstItem="p6E-6G-yq5" firstAttribute="top" secondItem="yYP-Ep-pH4" secondAttribute="bottom" constant="8" id="iCU-R3-jPH"/>
                             <constraint firstItem="qOy-wu-X4r" firstAttribute="centerX" secondItem="hQ5-FW-rea" secondAttribute="centerX" id="thY-of-AO8"/>
                             <constraint firstItem="gFj-Gx-3pi" firstAttribute="top" secondItem="jo2-2W-cKW" secondAttribute="bottom" constant="8" id="xAN-S7-gH5"/>
+                            <constraint firstItem="d0C-fN-NmP" firstAttribute="leading" secondItem="eWc-D8-ZfT" secondAttribute="leading" id="zUC-Aj-pWF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="I6L-AI-lTy"/>
@@ -266,6 +276,7 @@
     <resources>
         <image name="job_uranaishi" width="180" height="180"/>
         <image name="nihonchizu_area" width="400" height="400"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

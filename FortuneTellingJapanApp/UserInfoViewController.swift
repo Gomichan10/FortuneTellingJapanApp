@@ -34,6 +34,11 @@ class UserInfoViewController: UIViewController {
         datePicker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
     }
     
+    //キーボード以外の画面を触ったらキーボード消すようにするメソッド
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     /// DatePickerの値が変更されたときに年、月、日を更新し、コンソールに表示する関数です
     @objc func dateChanged(_ sender: UIDatePicker) {
         let calendar = Calendar.current

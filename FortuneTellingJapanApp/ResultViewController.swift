@@ -72,5 +72,10 @@ class ResultViewController: UIViewController {
             }
         }
     }
-
+    
+    //情報入力画面に戻るボタン
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
 }
