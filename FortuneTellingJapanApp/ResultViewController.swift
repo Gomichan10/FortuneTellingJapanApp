@@ -40,9 +40,9 @@ class ResultViewController: UIViewController {
         nameLabel.text = name
         capitalLabel.text = "県庁所在地：\(jsonData["capital"] as? String ?? "なし")"
         if let citizenDayData = jsonData["citizen_day"] as? [String: Int], let citizenDay = try? JSONDecoder().decode(MonthDay.self, from: JSONSerialization.data(withJSONObject: citizenDayData)) {
-            citizenDayLabel.text = "\(name ?? "No Name")県の県民の日は、\(citizenDay.month)月\(citizenDay.day)日です"
+            citizenDayLabel.text = "\(name ?? "No Name")の県民の日は、\(citizenDay.month)月\(citizenDay.day)日です"
         } else {
-            citizenDayLabel.text = "\(name ?? "No Name")県は県民の日がありません"
+            citizenDayLabel.text = "\(name ?? "No Name")は県民の日がありません"
         }
         if jsonData["has_coast_line"] as? Bool == true {
             hasCoatLineLabel.text = "海岸線：あり"
